@@ -10,4 +10,8 @@
 
 @interface CRLColors : NSObject
 
+@property (strong, nonatomic) NSString* title;
+@property (strong, nonatomic) NSString* description;
+
+-(id)initWithTitle:(NSString*)theTitle AndDescription:(NSString*)theDescription;
 @end

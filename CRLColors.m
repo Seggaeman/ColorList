@@ -10,4 +10,13 @@
 
 @implementation CRLColors
 
+-(id)initWithTitle:(NSString *)theTitle AndDescription:(NSString *)theDescription
+{
+    if (self= [super init])
+    {
+        self->_title = theTitle;
+        self->_description = theDescription;
+    }
+    return self;
+}
 @end
