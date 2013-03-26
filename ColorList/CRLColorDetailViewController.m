@@ -9,6 +9,11 @@
 #import "CRLColorDetailViewController.h"
 #import "UIColor+HexString.h"
 @interface CRLColorDetailViewController ()
+@property (weak,nonatomic) IBOutlet UIView* colorView;
+@property (weak,nonatomic) IBOutlet UILabel* colorViewLabel;
+@property (weak,nonatomic) IBOutlet UILabel* titleLabel;
+@property (weak,nonatomic) IBOutlet UILabel* descriptionLabel;
+
 
 @end
 

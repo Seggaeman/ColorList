@@ -120,6 +120,10 @@
     [theCell.titleLabel setText:colorInst.title];
     [theCell.descriptionLabel setText:colorInst.description];
     [theCell.colorView setBackgroundColor:[UIColor colorWithHexString:colorInst.colorString inverted:NO]];
+    
+    UIView *selectionColor = [[UIView alloc] init];
+    selectionColor.backgroundColor = [UIColor colorWithHexString:colorInst.colorString inverted:NO];
+    theCell.selectedBackgroundView = selectionColor;
     return theCell;
 }
 

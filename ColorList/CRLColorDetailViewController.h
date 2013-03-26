@@ -11,10 +11,6 @@
 
 @interface CRLColorDetailViewController : UIViewController
 
-@property (weak,nonatomic) IBOutlet UIView* colorView;
-@property (weak,nonatomic) IBOutlet UILabel* colorViewLabel;
-@property (weak,nonatomic) IBOutlet UILabel* titleLabel;
-@property (weak,nonatomic) IBOutlet UILabel* descriptionLabel;
 @property (strong, nonatomic) CRLColors* colorInstance;
 
 @end
