@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CRLViewController : UIViewController <NSURLConnectionDataDelegate>
+@interface CRLViewController : UITableViewController <NSURLConnectionDataDelegate>
 {
     NSMutableData* theData;
+    NSMutableArray* colors;
 }
 @end

@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) NSString* title;
 @property (strong, nonatomic) NSString* description;
+@property (strong, nonatomic) NSString* colorString;
 
 -(id)initWithTitle:(NSString*)theTitle AndDescription:(NSString*)theDescription;
+-(id)initWithDictionary:(NSDictionary*)ipDictionary;
 @end

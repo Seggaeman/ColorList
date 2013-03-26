@@ -19,4 +19,15 @@
     }
     return self;
 }
+
+-(id)initWithDictionary:(NSDictionary *)ipDictionary
+{
+    if (self= [super init])
+    {
+        self->_title = ipDictionary[@"title"];
+        self->_description = ipDictionary[@"description"];
+        self->_colorString = ipDictionary[@"hex"];
+    }
+    return self;
+}
 @end

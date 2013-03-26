@@ -10,6 +10,9 @@
 		573D5EC61700836200115376 /* CRLColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D5EC31700836200115376 /* CRLColors.m */; };
 		573D5EC71700836200115376 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D5EC51700836200115376 /* NSString+URLEncoding.m */; };
 		573D5ECB1700843800115376 /* CRLURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D5ECA1700843800115376 /* CRLURLHelper.m */; };
+		573D5ECE1701801C00115376 /* TitleDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573D5ECD1701801C00115376 /* TitleDescriptionCell.xib */; };
+		573D5ED41701885100115376 /* TitleDescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D5ED31701885100115376 /* TitleDescriptionCell.m */; };
+		573D5ED71701A80500115376 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D5ED61701A80500115376 /* UIColor+HexString.m */; };
 		57765C5317005B8B008357BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57765C5217005B8B008357BF /* UIKit.framework */; };
 		57765C5517005B8B008357BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57765C5417005B8B008357BF /* Foundation.framework */; };
 		57765C5717005B8B008357BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57765C5617005B8B008357BF /* CoreGraphics.framework */; };
@@ -30,6 +33,11 @@
 		573D5EC51700836200115376 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncoding.m"; path = "ColorList/NSString+URLEncoding.m"; sourceTree = "<group>"; };
 		573D5EC91700843800115376 /* CRLURLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLURLHelper.h; sourceTree = "<group>"; };
 		573D5ECA1700843800115376 /* CRLURLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLURLHelper.m; sourceTree = "<group>"; };
+		573D5ECD1701801C00115376 /* TitleDescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleDescriptionCell.xib; sourceTree = "<group>"; };
+		573D5ED21701885100115376 /* TitleDescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleDescriptionCell.h; sourceTree = "<group>"; };
+		573D5ED31701885100115376 /* TitleDescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleDescriptionCell.m; sourceTree = "<group>"; };
+		573D5ED51701A80500115376 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		573D5ED61701A80500115376 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
 		57765C4F17005B8B008357BF /* ColorList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57765C5217005B8B008357BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57765C5417005B8B008357BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +75,8 @@
 			children = (
 				573D5EC21700836200115376 /* CRLColors.h */,
 				573D5EC31700836200115376 /* CRLColors.m */,
+				573D5ED21701885100115376 /* TitleDescriptionCell.h */,
+				573D5ED31701885100115376 /* TitleDescriptionCell.m */,
 			);
 			name = Models;
 			path = ..;
@@ -77,6 +87,8 @@
 			children = (
 				573D5EC41700836200115376 /* NSString+URLEncoding.h */,
 				573D5EC51700836200115376 /* NSString+URLEncoding.m */,
+				573D5ED51701A80500115376 /* UIColor+HexString.h */,
+				573D5ED61701A80500115376 /* UIColor+HexString.m */,
 			);
 			name = Categories;
 			path = ..;
@@ -89,6 +101,15 @@
 				573D5ECA1700843800115376 /* CRLURLHelper.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		573D5ECC1701800000115376 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				57765C6D17005B8C008357BF /* CRLViewController.xib */,
+				573D5ECD1701801C00115376 /* TitleDescriptionCell.xib */,
+			);
+			name = Xib;
 			sourceTree = "<group>";
 		};
 		57765C4617005B8B008357BF = {
@@ -121,6 +142,7 @@
 		57765C5817005B8B008357BF /* ColorList */ = {
 			isa = PBXGroup;
 			children = (
+				573D5ECC1701800000115376 /* Xib */,
 				573D5EC81700841700115376 /* Helpers */,
 				573D5E851700829D00115376 /* Categories */,
 				573D5E8117007DC200115376 /* Models */,
@@ -128,7 +150,6 @@
 				57765C6217005B8B008357BF /* CRLAppDelegate.m */,
 				57765C6A17005B8C008357BF /* CRLViewController.h */,
 				57765C6B17005B8C008357BF /* CRLViewController.m */,
-				57765C6D17005B8C008357BF /* CRLViewController.xib */,
 				57765C5917005B8B008357BF /* Supporting Files */,
 			);
 			path = ColorList;
@@ -205,6 +226,7 @@
 				57765C6717005B8C008357BF /* Default@2x.png in Resources */,
 				57765C6917005B8C008357BF /* Default-568h@2x.png in Resources */,
 				57765C6F17005B8C008357BF /* CRLViewController.xib in Resources */,
+				573D5ECE1701801C00115376 /* TitleDescriptionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +243,8 @@
 				573D5EC61700836200115376 /* CRLColors.m in Sources */,
 				573D5EC71700836200115376 /* NSString+URLEncoding.m in Sources */,
 				573D5ECB1700843800115376 /* CRLURLHelper.m in Sources */,
+				573D5ED41701885100115376 /* TitleDescriptionCell.m in Sources */,
+				573D5ED71701A80500115376 /* UIColor+HexString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
