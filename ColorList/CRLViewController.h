@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CRLViewController : UIViewController
-
+@interface CRLViewController : UIViewController <NSURLConnectionDataDelegate>
+{
+    NSMutableData* theData;
+}
 @end

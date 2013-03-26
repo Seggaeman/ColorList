@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		573D5E8417007DE300115376 /* CRLColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D5E8317007DE300115376 /* CRLColors.m */; };
+		573D5EC61700836200115376 /* CRLColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D5EC31700836200115376 /* CRLColors.m */; };
+		573D5EC71700836200115376 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D5EC51700836200115376 /* NSString+URLEncoding.m */; };
+		573D5ECB1700843800115376 /* CRLURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D5ECA1700843800115376 /* CRLURLHelper.m */; };
 		57765C5317005B8B008357BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57765C5217005B8B008357BF /* UIKit.framework */; };
 		57765C5517005B8B008357BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57765C5417005B8B008357BF /* Foundation.framework */; };
 		57765C5717005B8B008357BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57765C5617005B8B008357BF /* CoreGraphics.framework */; };
@@ -22,8 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		573D5E8217007DE300115376 /* CRLColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLColors.h; sourceTree = "<group>"; };
-		573D5E8317007DE300115376 /* CRLColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLColors.m; sourceTree = "<group>"; };
+		573D5EC21700836200115376 /* CRLColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRLColors.h; path = ColorList/CRLColors.h; sourceTree = "<group>"; };
+		573D5EC31700836200115376 /* CRLColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRLColors.m; path = ColorList/CRLColors.m; sourceTree = "<group>"; };
+		573D5EC41700836200115376 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncoding.h"; path = "ColorList/NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		573D5EC51700836200115376 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncoding.m"; path = "ColorList/NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		573D5EC91700843800115376 /* CRLURLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLURLHelper.h; sourceTree = "<group>"; };
+		573D5ECA1700843800115376 /* CRLURLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLURLHelper.m; sourceTree = "<group>"; };
 		57765C4F17005B8B008357BF /* ColorList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57765C5217005B8B008357BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57765C5417005B8B008357BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,16 +65,35 @@
 		573D5E8117007DC200115376 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				573D5E8217007DE300115376 /* CRLColors.h */,
-				573D5E8317007DE300115376 /* CRLColors.m */,
+				573D5EC21700836200115376 /* CRLColors.h */,
+				573D5EC31700836200115376 /* CRLColors.m */,
 			);
 			name = Models;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		573D5E851700829D00115376 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				573D5EC41700836200115376 /* NSString+URLEncoding.h */,
+				573D5EC51700836200115376 /* NSString+URLEncoding.m */,
+			);
+			name = Categories;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		573D5EC81700841700115376 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				573D5EC91700843800115376 /* CRLURLHelper.h */,
+				573D5ECA1700843800115376 /* CRLURLHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		57765C4617005B8B008357BF = {
 			isa = PBXGroup;
 			children = (
-				573D5E8117007DC200115376 /* Models */,
 				57765C5817005B8B008357BF /* ColorList */,
 				57765C5117005B8B008357BF /* Frameworks */,
 				57765C5017005B8B008357BF /* Products */,
@@ -96,6 +121,9 @@
 		57765C5817005B8B008357BF /* ColorList */ = {
 			isa = PBXGroup;
 			children = (
+				573D5EC81700841700115376 /* Helpers */,
+				573D5E851700829D00115376 /* Categories */,
+				573D5E8117007DC200115376 /* Models */,
 				57765C6117005B8B008357BF /* CRLAppDelegate.h */,
 				57765C6217005B8B008357BF /* CRLAppDelegate.m */,
 				57765C6A17005B8C008357BF /* CRLViewController.h */,
@@ -190,7 +218,9 @@
 				57765C5F17005B8B008357BF /* main.m in Sources */,
 				57765C6317005B8B008357BF /* CRLAppDelegate.m in Sources */,
 				57765C6C17005B8C008357BF /* CRLViewController.m in Sources */,
-				573D5E8417007DE300115376 /* CRLColors.m in Sources */,
+				573D5EC61700836200115376 /* CRLColors.m in Sources */,
+				573D5EC71700836200115376 /* NSString+URLEncoding.m in Sources */,
+				573D5ECB1700843800115376 /* CRLURLHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
