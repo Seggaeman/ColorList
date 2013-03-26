@@ -13,8 +13,6 @@
 @interface CRLAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) CRLViewController *viewController;
-
+@property (strong, nonatomic) UINavigationController* navController;
 @end
 

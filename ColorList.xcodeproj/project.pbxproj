@@ -13,6 +13,8 @@
 		573D5ECE1701801C00115376 /* TitleDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573D5ECD1701801C00115376 /* TitleDescriptionCell.xib */; };
 		573D5ED41701885100115376 /* TitleDescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D5ED31701885100115376 /* TitleDescriptionCell.m */; };
 		573D5ED71701A80500115376 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D5ED61701A80500115376 /* UIColor+HexString.m */; };
+		573D5ED91701B09600115376 /* CRLColorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573D5ED81701B09600115376 /* CRLColorDetailViewController.xib */; };
+		573D5EDC1701B5FF00115376 /* CRLColorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D5EDB1701B5FF00115376 /* CRLColorDetailViewController.m */; };
 		57765C5317005B8B008357BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57765C5217005B8B008357BF /* UIKit.framework */; };
 		57765C5517005B8B008357BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57765C5417005B8B008357BF /* Foundation.framework */; };
 		57765C5717005B8B008357BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57765C5617005B8B008357BF /* CoreGraphics.framework */; };
@@ -38,6 +40,9 @@
 		573D5ED31701885100115376 /* TitleDescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleDescriptionCell.m; sourceTree = "<group>"; };
 		573D5ED51701A80500115376 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		573D5ED61701A80500115376 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		573D5ED81701B09600115376 /* CRLColorDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CRLColorDetailViewController.xib; sourceTree = "<group>"; };
+		573D5EDA1701B5FE00115376 /* CRLColorDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLColorDetailViewController.h; sourceTree = "<group>"; };
+		573D5EDB1701B5FF00115376 /* CRLColorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLColorDetailViewController.m; sourceTree = "<group>"; };
 		57765C4F17005B8B008357BF /* ColorList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57765C5217005B8B008357BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57765C5417005B8B008357BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,6 +113,7 @@
 			children = (
 				57765C6D17005B8C008357BF /* CRLViewController.xib */,
 				573D5ECD1701801C00115376 /* TitleDescriptionCell.xib */,
+				573D5ED81701B09600115376 /* CRLColorDetailViewController.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -150,6 +156,8 @@
 				57765C6217005B8B008357BF /* CRLAppDelegate.m */,
 				57765C6A17005B8C008357BF /* CRLViewController.h */,
 				57765C6B17005B8C008357BF /* CRLViewController.m */,
+				573D5EDA1701B5FE00115376 /* CRLColorDetailViewController.h */,
+				573D5EDB1701B5FF00115376 /* CRLColorDetailViewController.m */,
 				57765C5917005B8B008357BF /* Supporting Files */,
 			);
 			path = ColorList;
@@ -227,6 +235,7 @@
 				57765C6917005B8C008357BF /* Default-568h@2x.png in Resources */,
 				57765C6F17005B8C008357BF /* CRLViewController.xib in Resources */,
 				573D5ECE1701801C00115376 /* TitleDescriptionCell.xib in Resources */,
+				573D5ED91701B09600115376 /* CRLColorDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +254,7 @@
 				573D5ECB1700843800115376 /* CRLURLHelper.m in Sources */,
 				573D5ED41701885100115376 /* TitleDescriptionCell.m in Sources */,
 				573D5ED71701A80500115376 /* UIColor+HexString.m in Sources */,
+				573D5EDC1701B5FF00115376 /* CRLColorDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

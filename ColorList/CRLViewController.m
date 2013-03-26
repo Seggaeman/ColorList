@@ -11,6 +11,7 @@
 #import "CRLColors.h"
 #import "TitleDescriptionCell.h"
 #import "UIColor+HexString.h"
+#import "CRLColorDetailViewController.h"
 
 #define networkNotificationActivityOn()  [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES]
 #define networkNotificationActivityOff() [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO]
@@ -43,13 +44,18 @@
 }
 -(void) viewDidAppear:(BOOL)animated
 {
+    //scrolling before JSON data has been retrieved makes application crash; next line prevents this.
+    //commented out because we are checking the object count in self->colors. If it's > 0 don't redownload the JSON.
+    //[[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     [super viewDidAppear:animated];
-    [self->theData setLength:0];
-    [self->colors removeAllObjects];
-    //[self->theData setData:nil]; should work too
-    //NSMutableDictionary* getDictionary = [@{@"format":@"json"} mutableCopy];
-    [CRLURLHelper HTTPRequest:[NSURL URLWithString:@"http://colourlovers.com/api/colors?format=json"] requestMethod:@"GET" requestData:nil URLConnectionDataDelegate:self];
-    networkNotificationActivityOn();
+    if ([self->colors count] == 0)
+    {
+        [self->theData setLength:0];
+        [self->colors removeAllObjects];
+
+        [CRLURLHelper HTTPRequest:[NSURL URLWithString:@"http://colourlovers.com/api/colors?format=json"] requestMethod:@"GET" requestData:nil URLConnectionDataDelegate:self];
+        networkNotificationActivityOn();
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,18 +66,16 @@
 
 -(void) viewDidDisappear:(BOOL)animated
 {
-    [super viewDidDisappear:animated];    
+    [super viewDidDisappear:animated];
 }
 
 #pragma mark - NSURLDataDelegate methods
 - (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    //NSLog(@"Response received");
 }
 
 - (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    //NSLog(@"Receiving data");
     [self->theData appendData:data];
 }
 
@@ -86,13 +90,12 @@
     }];
     networkNotificationActivityOff();
     [self.tableView reloadData];
+    //[[UIApplication sharedApplication] endIgnoringInteractionEvents];
 }
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-    //NSLog(@"Failed");
     UIAlertView* errorView= [[UIAlertView alloc] initWithTitle:@"Erreur" message:@"Erreur en accedant le URL" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [errorView show];
-    
 }
 
 #pragma mark- UITableView methods
@@ -116,13 +119,21 @@
     //set title and description
     [theCell.titleLabel setText:colorInst.title];
     [theCell.descriptionLabel setText:colorInst.description];
-    //NSLog(@"%@", colorInst.colorString);
-    [theCell.colorView setBackgroundColor:[UIColor colorWithHexString:colorInst.colorString]];
+    [theCell.colorView setBackgroundColor:[UIColor colorWithHexString:colorInst.colorString inverted:NO]];
     return theCell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 80.0;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CRLColors* colorInst= self->colors[indexPath.row];
+    CRLColorDetailViewController* colorDetailVC= [[CRLColorDetailViewController alloc] init];
+    colorDetailVC.colorInstance = colorInst;
+    
+    [self.navigationController pushViewController:colorDetailVC animated:YES];
 }
 @end

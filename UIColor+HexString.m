@@ -10,7 +10,7 @@
 
 @implementation UIColor (HexString)
 
-+(UIColor*)colorWithHexString:(NSString *)hexString
++(UIColor*)colorWithHexString:(NSString *)hexString inverted:(BOOL)status
 {
     //parse the hex string.
     CGFloat (^getColorComp)(int, int) = ^CGFloat(int origin, int length) {
@@ -18,6 +18,9 @@
         CGFloat colorComp = (double)strtol([compSubstr UTF8String], NULL, 16) / 255.0;
         return colorComp;
     };
-    return [UIColor colorWithRed:getColorComp(0,2) green:getColorComp(2,2) blue:getColorComp(4,2) alpha:1.0];
+    if (status == YES)
+        return [UIColor colorWithRed:(1.0-getColorComp(0,2)) green:(1.0-getColorComp(2,2)) blue:(1.0-getColorComp(4,2)) alpha:1.0];
+    else
+        return [UIColor colorWithRed:getColorComp(0,2) green:getColorComp(2,2) blue:getColorComp(4,2) alpha:1.0];
 }
 @end
